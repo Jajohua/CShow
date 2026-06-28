@@ -1,34 +1,216 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css">
-        <title>CShow - The Cdrama Site</title>
-    </head>
-    <body>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>CShow - The Cdrama Site</title>
+</head>
+
+<body>
+<div id="custom-sword-container" style="position: absolute; pointer-events: none; z-index: 9999; display: none;">
+  <div id="sword-wrapper" style="position: absolute; width: 60px; height: 100px; transform-origin: 30px 4px;">
+    <svg id="sword-icon" width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+      style="position: absolute; top: 0; left: 0;">
+      <path d="M12 1L15 5V15H9V5L12 1Z" fill="#b3b3e6" stroke="#231b4d" stroke-width="0.75" />
+      <path d="M6 15H18V17H6V15Z" fill="#ffd700" stroke="#231b4d" stroke-width="0.75" />
+      <rect x="11" y="17" width="2" height="5" fill="#dfd5a5" stroke="#231b4d" stroke-width="0.75" />
+      <circle cx="12" cy="22" r="1" fill="none" stroke="#ffd700" stroke-width="0.75" />
+    </svg>
+
+    <svg id="tassel-icon" width="28" height="40" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+      style="position: absolute; top: 53px; left: 16px; transform-origin: 12px 0px;">
+      <path d="M12 0V8M12 8L9 11H15L12 8Z" stroke="#cc3333" stroke-width="2" stroke-linejoin="round" />
+      <circle cx="12" cy="13" r="3" fill="#4ade80" stroke="#231b4d" stroke-width="0.75" />
+      <path d="M9 16L6 32H18L15 16H9Z" fill="#cc3333" stroke="#991b1b" stroke-width="0.5" />
+      <path d="M10 16V32M12 16V32M14 16V32" stroke="#991b1b" stroke-width="0.5" />
+    </svg>
+  </div>
+</div>
+
+  <div class="main-column">
 
     <h1>CShow</h1>
     <h2>The CDrama Site</h2>
-    
-    <h3>Wuxia, Xianxia, and More</h3>
-    
-    <p>This site was made out of a love for wuxia, xianxia, and the occational historical/costume drama. </p>
-    
-    <h4>The Happy Ending</h4>
 
-      <p>Not every show needs a happy ending --- but for Blue and Mayko the ending is crucial, and sometimes it takes knowing the ending to have the courage to embark on a 50 episode cryfest.</p>
-      
-    <p>A key function of this site is to track information on dramas' endings— recording whether a given drama has a happy ending (HE) or not. <br> 
+    <h3>Wuxia, Xianxia, and More</h3>
+
+    <p>This site was made out of a love for wuxia, xianxia, and the occasional historical/costume drama.</p>
+
+    <h4>The Happy Ending</h4>
+    <p>Not every show needs a happy ending --- but for Blue and Mayko the ending is crucial, and sometimes it takes
+      knowing the ending to have the courage to embark on a 50 episode cryfest.</p>
+    <p>A key function of this site is to track information on dramas' endings— recording whether a given drama has a
+      happy ending (HE) or not.<br>
       This mission is inspired by much pain in our past.</p>
 
     <h4>Our Greatest Loves</h4>
-      <p>Below is a list of our favorite CDrama.</p>
-      <ul><li>The Untamed<li>Word of Honor </ul>
-    
+    <p>Below is a list of our favorite CDrama.</p>
+    <ul>
+      <li>The Untamed</li>
+      <li>Word of Honor</li>
+    </ul>
+
     <h4>Favorite Elements</h4>
-    <ol><li>Unambigiously Happy Ending</li>
-    <li>Impactful FL</li><li>Non-toxic ML</li></ol></body></html>
- 
-    <p> Visit our passionate <a href = "Why.html" target="_self"> about page </a> to read more. </p>
-    <p> Visit our opion on <a href = "endingsAreTheyGood.html" target="_self"> endings </a> to read more. </p>
-    
+    <ol>
+      <li>Unambiguously Happy Ending</li>
+      <li>Impactful FL</li>
+      <li>Non-toxic ML</li>
+    </ol>
+
+    <p>Visit our passionate <a href="Why.html" target="_self">about page</a> to read more.</p>
+    <p>Visit our opinion on <a href="endingsAreTheyGood.html" target="_self">endings</a> to read more.</p>
+
+    <p align="center">Thanks for visiting, honored guest.</p>
+
+    <p align="center">
+      <img
+        src="https://hitwebcounter.com/counter/counter.php?page=YOUR_GITHUB_REPO_NAME&style=0001&nbdigits=5&type=page&initCount=0"
+        title="Free Counter" Alt="web counter" border="0" />
+    </p>
+
+  </div>
+
+  <script>
+    document.addEventListener('mousemove', function (e) {
+      if (Math.random() > 0.15) return;
+
+      const petal = document.createElement('span');
+      petal.innerText = '🌸';
+      petal.style.position = 'absolute';
+      petal.style.left = e.pageX + 'px';
+      petal.style.top = e.pageY + 'px';
+      petal.style.pointerEvents = 'none';
+      petal.style.fontSize = (Math.random() * 10 + 10) + 'px';
+      petal.style.transition = 'all 1s ease-out';
+
+      document.body.appendChild(petal);
+
+      setTimeout(() => {
+        petal.style.transform = `translate(${(Math.random() - 0.5) * 50}px, 50px) rotate(${Math.random() * 360}deg)`;
+        petal.style.opacity = '0';
+      }, 10);
+
+      setTimeout(() => {
+        petal.remove();
+      }, 1000);
+    });
+  </script>
+<script>
+  const container = document.getElementById('custom-sword-container');
+  const wrapper = document.getElementById('sword-wrapper');
+  const tassel = document.getElementById('tassel-icon');
+
+  let easedX = window.innerWidth / 2;
+  let easedY = window.innerHeight / 2;
+  let mouseX = easedX, mouseY = easedY;
+  let lastEasedX = easedX, lastEasedY = easedY;
+
+  let currentAngle = 0;
+
+  // Real-world screen coordinates for the trailing tassel tip
+  let tasselWorldX = easedX;
+  let tasselWorldY = easedY;
+  let vx = 0, vy = 0;
+
+  // --- 🎭 CINEMATIC TUNING BALANCERS ---
+  const swordFollowTracking = 0.28;
+  const swordRotationSmooth = 0.22;
+
+  const stringLength = 24;
+  const gravity = 0.45;
+  const stiffness = 0.12;
+  const friction = 0.90;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+
+    if (e.target.closest('.main-column')) {
+      container.style.display = 'block';
+    } else {
+      container.style.display = 'none';
+    }
+  });
+
+  function updatePhysics() {
+    easedX += (mouseX - easedX) * swordFollowTracking;
+    easedY += (mouseY - easedY) * swordFollowTracking;
+
+    let dxEased = easedX - lastEasedX;
+    let dyEased = easedY - lastEasedY;
+    let movementSpeed = Math.hypot(dxEased, dyEased);
+
+    if (movementSpeed > 0.1) {
+      // Since the tip leads the movement, the sword points forward into the tracking trajectory
+      let targetAngle = Math.atan2(dyEased, dxEased) * (180 / Math.PI) + 90;
+
+      let angleDiff = targetAngle - currentAngle;
+      while (angleDiff < -180) angleDiff += 360;
+      while (angleDiff > 180) angleDiff -= 360;
+
+      currentAngle += angleDiff * swordRotationSmooth;
+    }
+
+    container.style.left = easedX + 'px';
+    container.style.top = easedY + 'px';
+
+    // Pivot translation centered exactly on the tip point coordinate layout
+    wrapper.style.transform = `translate(-30px, -4px) rotate(${currentAngle}deg)`;
+
+    // ⚓ CALCULATING THE EXTACT POSITION OF THE SPINNING POMMEL
+    // The sword canvas points up by default. We convert the rotation to radians to locate 
+    // where the hilt ring trails behind the cursor tip.
+    const rad = (currentAngle - 90) * (Math.PI / 180);
+    const handleOffsetLength = 51;
+
+    // The handle extends backwards, opposite to the tip direction vector
+    const anchorX = easedX + Math.cos(rad + Math.PI) * handleOffsetLength;
+    const anchorY = easedY + Math.sin(rad + Math.PI) * handleOffsetLength;
+
+    // Run world-space pendulum physics from the moving handle ring coordinate
+    let dxTassel = anchorX - tasselWorldX;
+    let dyTassel = anchorY - tasselWorldY;
+
+    vx += dxTassel * stiffness;
+    vy += dyTassel * stiffness;
+    vy += gravity;
+
+    vx -= dxEased * 0.15;
+    vy -= dyEased * 0.15;
+
+    vx *= friction;
+    vy *= friction;
+
+    tasselWorldX += vx;
+    tasselWorldY += vy;
+
+    let dist = Math.hypot(tasselWorldX - anchorX, tasselWorldY - anchorY);
+    if (dist > stringLength) {
+      tasselWorldX = anchorX + (tasselWorldX - anchorX) * (stringLength / dist);
+      tasselWorldY = anchorY + (tasselWorldY - anchorY) * (stringLength / dist);
+    }
+
+    // Sync the tassel asset's rotation structure to match global gravity space
+    let globalTasselAngle = Math.atan2(tasselWorldY - anchorY, tasselWorldX - anchorX) * (180 / Math.PI) - 90;
+    let localTasselAngle = globalTasselAngle - currentAngle;
+
+    tassel.style.transform = `rotate(${localTasselAngle}deg)`;
+
+    lastEasedX = easedX;
+    lastEasedY = easedY;
+
+    requestAnimationFrame(updatePhysics);
+  }
+
+  document.addEventListener('mouseenter', (e) => {
+    mouseX = e.pageX; mouseY = e.pageY;
+    easedX = mouseX; easedY = mouseY;
+    tasselWorldX = mouseX; tasselWorldY = mouseY;
+  }, { once: true });
+
+  updatePhysics();
+</script>
+</body>
+
+</html>

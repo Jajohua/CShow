@@ -1,14 +1,51 @@
-@import url('./font-families.css');
-
+/* 1. Pull in the font file from the very top line */
+@import url('font-families.css');
 
 body {
-  background-color: powderblue;
-  font-family: 'opendyslexic', sans-serif;
-}
-h1 {
-  color: blue;
-  text-align: center;
+  background-color: hwb(220 16% 67%);
+  background-image: url('petals.gif');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: #b3b3e6 !important;
 
-p {
-  color: red;
+  /* 2. Use the exact name defined in your font file */
+  font-family: 'opendyslexic', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.main-column {
+  width: 75%;
+  max-width: 85%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: hsl(231, 74%, 17%);
+  padding: 40px 30px;
+  box-sizing: border-box;
+
+  /* 🗡️ Hides the normal mouse arrow so only our sword shows up! */
+    cursor: none;
+}
+
+/* Because the font file uses weight and style rules, browser tags like h1 
+   will automatically snap to the bold version of 'opendyslexic' on their own! */
+h1,
+h2,
+h3,
+h4,
+strong {
+  font-family: 'opendyslexic', sans-serif !important;
+  color: #b3b3e6 !important;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+li {
+  color: #b3b3e6;
+}
+
+a {
+  color: #ffd700;
+  text-decoration: underline;
 }

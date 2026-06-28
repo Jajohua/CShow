@@ -56,5 +56,47 @@
          url('opendyslexic-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+body {
+        background-color: #1a1a1a;
+        /* Dark retro canvas */
+        color: #e0e0e0;
+        /* Light text */
 
+        /* This tells the browser to use your regular OpenDyslexic font! */
+        font-family: 'opendyslexicregular', sans-serif;
+
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        /* Gives the weighted fonts a bit of breathing room */
+    }
+
+    .main-column {
+        width: 800px;
+        max-width: 95%;
+        margin: 0 auto;
+        /* Centers the content box */
+        background-color: #2a2a2a;
+        /* Slightly lighter content box */
+        padding: 20px;
+        border-left: 2px solid #b8860b;
+        /* Gold borders for a touch of drama */
+        border-right: 2px solid #b8860b;
+        box-sizing: border-box;
+    }
+
+    /* Optional: Connect your bold and italic font faces to actual text tags */
+    h1,
+    h2,
+    h3,
+    strong {
+        font-family: 'opendyslexicbold', sans-serif;
+        color: #ffd700;
+        /* Pop of gold for headers */
+    }
+
+    em,
+    i {
+        font-family: 'opendyslexicitalic', sans-serif;
+}
 }
