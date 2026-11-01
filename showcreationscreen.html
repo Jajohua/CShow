@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>CShow - Show Creation Screen</title>
+</head>
+
+<body>
+
+  <div class="main-column">
+
+    <h1>Show Creation Screen</h1>
+    <h2>Create and Manage Your CDrama Information</h2>
+
+    <h3>Add New Show</h3>
+    <p>This screen allows you to add new CDrama shows to the database and manage existing entries.</p>
+
+    <h4>Show Information</h4>
+    <p>Fill in the details below to add a new show:</p>
+    
+    <!-- Form fields would go here -->
+    <div style="background-color: hsl(231, 74%, 25%); padding: 20px; border-radius: 8px; margin: 20px 0;">
+      <p><strong>Form Fields Coming Soon:</strong></p>
+      <ul>
+        <li>Show Title</li>
+        <li>Genre (Wuxia, Xianxia, Historical, etc.)</li>
+        <li>Number of Episodes</li>
+        <li>Main Actors</li>
+        <li>Ending Type (HE/Sad/Open)</li>
+        <li>Rating (1-10)</li>
+      </ul>
+    </div>
+
+    <h4>Current Shows</h4>
+    <p>Manage existing shows in the database:</p>
+    <ul>
+      <li>The Untamed (Edit | Delete)</li>
+      <li>Word of Honor (Edit | Delete)</li>
+      <li>Nirvana in Fire (Edit | Delete)</li>
+    </ul>
+
+    <p>Return to the <a href="index.html" target="_self">main page</a>.</p>
+    <p>Check our opinion on <a href="endingsAreTheyGood.html" target="_self">endings</a>.</p>
+
+    <p align="center">Thanks for managing our CDrama collection!</p>
+
+    <p align="center">
+      <img
+        src="https://hitwebcounter.com/counter/counter.php?page=YOUR_GITHUB_REPO_NAME&style=0001&nbdigits=5&type=page&initCount=0"
+        title="Free Counter" Alt="web counter" border="0" />
+    </p>
+
+  </div>
+
+  <script>
+    document.addEventListener('mousemove', function (e) {
+      if (Math.random() > 0.15) return;
+
+      const petal = document.createElement('span');
+      petal.innerText = '🌸';
+      petal.style.position = 'absolute';
+      petal.style.left = e.pageX + 'px';
+      petal.style.top = e.pageY + 'px';
+      petal.style.pointerEvents = 'none';
+      petal.style.fontSize = (Math.random() * 10 + 10) + 'px';
+      petal.style.transition = 'all 1s ease-out';
+
+      document.body.appendChild(petal);
+
+      setTimeout(() => {
+        petal.style.transform = `translate(${(Math.random() - 0.5) * 50}px, 50px) rotate(${Math.random() * 360}deg)`;
+        petal.style.opacity = '0';
+      }, 10);
+
+      setTimeout(() => {
+        petal.remove();
+      }, 1000);
+    });
+  </script>
+  <script src="sword-cursor.js"></script>
+</body>
+
+</html>
