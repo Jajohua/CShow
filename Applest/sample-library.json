@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "exportDate": "2026-11-01T21:30:00.000Z",
+    "totalShows": 2,
+    "source": "CShow Manager Applet"
+  },
+  "shows": [
+    {
+      "id": 1,
+      "title": "The Untamed",
+      "genre": "Xianxia",
+      "addedDate": "2026-11-01"
+    },
+    {
+      "id": 2,
+      "title": "Word of Honor",
+      "genre": "Wuxia",
+      "addedDate": "2026-11-01"
+    }
+  ]
+}

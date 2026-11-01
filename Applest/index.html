@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>CShow - Show Manager Applet</title>
+</head>
+<body>
+  <div class="main-column">
+    <h1>CShow Manager Applet</h1>
+    <h2>Add New Shows to Database</h2>
+    
+    <div id="libraryStatus" style="background-color: hsl(231, 74%, 25%); padding: 15px; border-radius: 8px; margin: 20px 0;">
+      <h4>Library Status</h4>
+      <p id="currentLibrary">No library loaded. Please load or create one.</p>
+      <button id="loadLibraryBtn" style="background-color: #ffd700; color: #000; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; margin-right: 10px;">
+        Load Library
+      </button>
+      <button id="createLibraryBtn" style="background-color: #ffd700; color: #000; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">
+        Create New Library
+      </button>
+      <input type="file" id="libraryFile" accept=".json" style="display: none;">
+    </div>
+    
+    <div id="addShowForm" style="background-color: hsl(231, 74%, 25%); padding: 20px; border-radius: 8px; margin: 20px 0; display: none;">
+      <h4>Add New Show</h4>
+      <form id="showForm">
+        <label for="title"><strong>Show Title:</strong></label><br>
+        <input type="text" id="title" name="title" placeholder="Enter show title" 
+               style="width: 100%; padding: 8px; margin-bottom: 15px; font-family: 'opendyslexic', sans-serif;"><br>
+        
+        <label for="genre"><strong>Genre:</strong></label><br>
+        <select id="genre" name="genre" style="width: 100%; padding: 8px; margin-bottom: 15px; font-family: 'opendyslexic', sans-serif;">
+          <option value="">Select a genre</option>
+          <option value="Wuxia">Wuxia</option>
+          <option value="Xianxia">Xianxia</option>
+          <option value="Historical">Historical</option>
+          <option value="Costume">Costume</option>
+          <option value="Modern">Modern</option>
+          <option value="Romance">Romance</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Mystery">Mystery</option>
+        </select><br>
+        
+        <button type="submit" style="background-color: #ffd700; color: #000; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+          Add Show to Library
+        </button>
+      </form>
+      <div id="formMessage" style="margin-top: 15px;"></div>
+    </div>
+    
+    <div id="libraryPreview" style="background-color: hsl(231, 74%, 25%); padding: 20px; border-radius: 8px; margin: 20px 0; display: none;">
+      <h4>Current Library Preview</h4>
+      <div id="showsList" style="max-height: 300px; overflow-y: auto;">
+        <!-- Shows will be listed here -->
+      </div>
+      <p>Total shows: <span id="showCount">0</span></p>
+      <button id="exportLibraryBtn" style="background-color: #ffd700; color: #000; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-top: 10px;">
+        Export Library as JSON
+      </button>
+      <a id="downloadLink" style="display: none;"></a>
+    </div>
+    
+    <p>Return to the <a href="../index.html" target="_self">main page</a>.</p>
+    
+    <p align="center">CShow Manager Applet v1.0</p>
+  </div>
+  
+  <script src="applet.js"></script>
+  <script src="../sword-cursor.js"></script>
+</body>
+</html>
